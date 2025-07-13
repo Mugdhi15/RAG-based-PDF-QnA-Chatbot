@@ -3,6 +3,14 @@ This project is a Retrieval-Augmented Generation (RAG) based chatbot that answer
 
 Tested on the iPhone User Manual, the system can be easily extended to any domain-specific documents like legal contracts, product guides, or research papers.
 
+# Technologies Used
+- LangChain
+- FAISS
+- Ollama (gemma2:2b)
+- PyPDFLoader
+- sentence-transformers
+- torch, transformers
+
 # Core Components
 # 1. Document Ingestion & Chunking
 - Loader: The PyPDFLoader from LangChain reads the PDF file.
@@ -26,3 +34,10 @@ A ZERO_SHOT_REACT_DESCRIPTION AgentType is used to select appropriate tools and 
 
 # 6. Validation Checks
 The pipeline includes unit tests for LLM availability, embedding model setup, retrieval performance, and QA chain consistency to ensure modular robustness.
+
+# Example Test Document
+The system was tested using the official iPhone user manual PDF, showcasing accurate context-based answers on topics like:
+- iPhone setup
+- Accessibility features
+- Security settings
+- Troubleshooting
